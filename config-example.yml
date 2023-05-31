@@ -1,0 +1,32 @@
+
+# Twitter V2 bearer token
+credentials:
+  bearer_token: XXX
+
+# Data to extract
+# See https://developer.twitter.com/en/docs/twitter-api/tweets/search/api-reference/get-tweets-search-all 
+# - expansions
+# - tweet.fields 
+# - user.fields
+# - place.fields
+data:
+ expansions: author_id,entities.mentions.username,in_reply_to_user_id,referenced_tweets.id,referenced_tweets.id.author_id
+ tweet_fields: id,lang,text,author_id,created_at,entities,public_metrics,geo
+ user_fields: location,name,profile_image_url,public_metrics,username,description
+
+# Example that mimics socialanalytics
+# data:
+#  expansions: author_id,entities.mentions.username,in_reply_to_user_id,referenced_tweets.id,referenced_tweets.id.author_id
+#  tweet_fields: id,lang,text,author_id,created_at,entities,public_metrics,geo
+#  user_fields: location,name,profile_image_url,public_metrics,username
+
+# Entities to search
+entities:
+  casas_rurales:
+    query: "\"casa rural\" OR \"casas rurales\" OR \"#casarural\" OR \"#casasrurales\""
+    date_from: "2022-01-24 00:00"
+    date_to: "2022-11-23 00:00"
+  pegasus:
+    query: pegasus
+    date_from: "2022-04-01 00:00"
+    date_to: "2022-06-01 00:00"

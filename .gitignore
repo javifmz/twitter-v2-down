@@ -1,0 +1,11 @@
+# General
+.DS_Store
+
+# Python
+__pycache__
+
+# Application
+/config.yml
+/output
+/_test.py
+/export.py
