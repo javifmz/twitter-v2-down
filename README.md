@@ -1,4 +1,4 @@
-# SocialDown
+# TwitterV2 Down
 
 A tool to download tweets using the Twitter API V2.
 
